@@ -1,0 +1,269 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document properties and packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,10pt,final]{memoir}
+
+% misc
+
+\renewcommand{\familydefault}{bch}	% font
+\pagestyle{empty}					% no pagenumbering
+\setlength{\parindent}{0pt}			% no paragraph indentation
+
+
+% required packages (add your own)
+\usepackage{flowfram}% column layou
+\usepackage{marvosym}
+\usepackage{textcomp}
+
+\usepackage[top=1cm,left=1cm,right=1cm,bottom=1cm]{geometry}% margins
+\usepackage{graphicx}										% figures
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}  %蓝色
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}										% URLs
+\usepackage[usenames,dvipsnames]{xcolor}					% color
+\usepackage{multicol}										% columns env.
+	\setlength{\multicolsep}{0pt}
+\usepackage{paralist}										% compact lists
+\usepackage{tikz}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Create column layout
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%定义主题颜色，可选颜色 Maroon，ForestGreen，DarkOrchid，RoyalBlue,Turquoise,Cyan,etc,更多颜色参考xcolor包的颜色定义
+\newcommand{\myThemeColor}{Maroon}
+% define length commands
+\setlength{\vcolumnsep}{\baselineskip}
+\setlength{\columnsep}{\vcolumnsep}
+
+% frame setup (flowfram package)
+% left frame
+%\newflowframe{0.23\textwidth}{\textheight}{0pt}{0pt}[left]
+%	\newlength{\LeftMainSep}
+%	\setlength{\LeftMainSep}{0.23\textwidth}
+%	\addtolength{\LeftMainSep}{1\columnsep}
+ 
+% small static frame for the vertical line
+%\newstaticframe{1.5pt}{\textheight}{\LeftMainSep}{0pt}
+ 
+% content of the static frame
+%\begin{staticcontents}{1}
+%\hfill
+%\tikz{%
+%	\draw[loosely dotted,color=\myThemeColor,line width=1.5pt,yshift=0]
+%	(0,0) -- (0,\textheight);}%
+%\hfill\mbox{}
+%\end{staticcontents}
+ 
+% right frame
+%\addtolength{\LeftMainSep}{1.5pt}
+%\addtolength{\LeftMainSep}{1\columnsep}
+%\newflowframe{0.7\textwidth}{\textheight}{\LeftMainSep}{0pt}[main01]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% define macros (for convience)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Sep}{\vspace{1em}}
+\newcommand{\SmallSep}{\vspace{0.9em}}
+
+\newcommand{\smallsep}{\vspace{0.45em}}
+\newenvironment{AboutMe}
+	{\ignorespaces\textbf{\color{\myThemeColor} About me}}
+	{\Sep\ignorespacesafterend}
+	
+\newcommand{\CVSection}[1]
+	{\large\textbf{\textsf{#1}}\par
+	\smallsep\normalsize\normalfont}
+
+\newcommand{\CVItem}[1]
+	{\textbf{\color{\myThemeColor} #1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Left frame
+%%%%%%%%%%%%%%%%%%%%
+%\begin{figure}
+%	\hfill
+%	\includegraphics[width=1\columnwidth]{photo}
+%	\vspace{-8cm}
+%\end{figure}
+
+
+
+
+% Right frame
+%%%%%%%%%%%%%%%%%%%%
+\Huge\bfseries {\color{\myThemeColor} Kuntai \textsc{Du}}
+\normalsize\normalfont
+\Letter{: \href{kuntai@uchicago.edu}{kuntai@uchicago.edu}}\\
+
+\CVSection{CONTACT INFORMATIONS}
+\hrule
+\SmallSep
+Department of Computer Science \\
+University of Chicago\\
+John Crerar Library\\
+5730 S. Ellis Ave.\\
+Chicago, IL  60637
+
+\SmallSep
+
+\CVSection{RESEARCH INTERESTS}
+\hrule
+\SmallSep
+\textit{Video Analytics, Networking}
+\\
+
+% Education
+\CVSection{EDUCATIONS}
+\hrule
+\SmallSep
+\CVItem{2019 Sep - present\hfill\textsc{University of Chicago, Illinois, United States of America}}\\
+\textit{Ph.D. in Computer Science}\\
+\CVItem{2015 Sep - 2019 Jul\hfill\textsc{Peking University, Beijing, China}}\\
+\textit{Bachelor in Computer Intelligence Science}
+
+\SmallSep
+
+\CVSection{PUBLICATIONS}
+\hrule
+\SmallSep
+
+\CVItem{SIGCOMM 2020}\\
+\textit{Server-Driven Video Streaming for Deep Learning Inference} \\
+\text{\textbf{Kuntai Du}*, Ahsan Pervaiz*, Xin Yuan, Aakanksha Chowdhery, Qizheng Zhang, Henry Hoffmann, Junchen Jiang}
+
+\SmallSep
+
+\CVItem{MobiCom 2020}\\
+\textit{Renovating Road Signs for Infrastructure-to-Vehicle Networking: A Visible Light Backscatter Communication and Networking Approach} \\
+\text{Purui Wang, Lilei Feng, Guojun Chen, Chenren Xu, Yue Wu, Kenuo Xu, Guobin Shen, \textbf{Kuntai Du}, Gang Huang, Xuanzhe Liu}
+
+\SmallSep
+
+\CVSection{AWARDS}
+\hrule
+\SmallSep
+    NSDI travel grant (2020)
+    Merit Student (2016-2017)\\
+	Kwang-Hua Scholarship (2016-2017)\\
+	Bronze medal in National Olympiad in Informatics (2014)\\
+
+\CVSection{TEACHING EXPERIENCE}
+\hrule
+\SmallSep
+\text{Attend teaching assistant at CS15400: Introduction to Computer System (2020)}\\
+\text{Attend teaching assistant at Algorithm Design and Analysis two times. (2018,2019)}
+
+
+\SmallSep
+% Research Experience
+\CVSection{RESEARCH EXPERIENCE}
+\hrule
+\smallsep
+\CVItem{2019 Sep - present\hfill\textsc{Junchen's Group, University of Chicago}}\\
+\textit{Advised by Junchen Jiang}\\
+\textbf{Machine-centered Video Analytics}
+\vspace{-0.5em}
+\begin{itemize}
+    \vspace{-0.5em}
+	\setlength{\itemsep}{0pt}
+	\setlength{\parsep}{0pt}
+	\setlength{\parskip}{0pt}
+    \item Apply deep-neural-network-driven approach in video streaming for analytics and reduce half of the bandwidth usage on multiple applications and video genres.
+\end{itemize}
+\smallsep
+
+\CVItem{2018 Sep - 2019 Jul\hfill\textsc{SOAR Group, Peking University}}\\
+\textit{Research Assistant of Prof. Chenren Xu}\\
+\textbf{Battery-free Backscatter Communication and Positioning Via Visible Light Communication}
+\begin{itemize}
+	\vspace{-0.5em}
+	\setlength{\itemsep}{0pt}
+	\setlength{\parsep}{0pt}
+	\setlength{\parskip}{0pt}
+	\item Revise the dynamic-programming-based demodulation algorithm to support high-frequency demodulation.
+	\item Propose a localization algorithm based on self-developed ranging algorithm and achieve sub-meter accuracy.
+\end{itemize}
+
+\CVItem{2018 Jul - 2018 Aug\hfill\textsc{University of Edinburgh}}\\
+\textit{Research Assistant of Prof. Boris Grot}\\
+\textbf{Software Optimization: Probabilistic Soft Logic}
+\begin{itemize}
+	\vspace{-0.5em}
+	\setlength{\itemsep}{0pt}
+	\setlength{\parsep}{0pt}
+	\setlength{\parskip}{0pt}
+	\item Profile the software find that the performance is bounded by severe load imbalance and too much remote memory access.
+	\item Re-implement the optimization phase in C++ for fine-grained workload and memory control.
+	\item Propose a heuristic algorithm to optimize the memory access patterns iteratively.
+\end{itemize}
+%\CVItem{2014-present\hfill\textsc{\'{E}cole Des Mines Nancy, France}}\\
+%\textit{-Department of Energy production and transformation}\\
+%\textit{-Master Degree and France engineer degree}
+
+
+\SmallSep
+\CVItem{2017 Jul - 2018 Jul\hfill\textsc{STRUCT, Peking University}}\\
+\textit{Research Assistant of Prof. Jiaying Liu}\\
+\textbf{Single Image De-raining}
+\begin{itemize}
+	\vspace{-0.5em}
+	\setlength{\itemsep}{0pt}
+	\setlength{\parsep}{0pt}
+	\setlength{\parskip}{0pt}
+	\item Propose a new discriminator for the residue layer. This method is suitable for other low-level image generation tasks to capture the specific prior knowledge.
+	\item Propose a multi-granularity perceptual loss based on online learning theory.
+\end{itemize}
+
+
+\SmallSep
+\CVSection{SKILLS}
+\hrule
+\SmallSep
+$\bullet$\CVItem{Programing Language:}\\ C/C++, Python, lisp, Matlab, Java.\\
+$\bullet$\CVItem{AI-related:}\\ Low-level image processing, Feature extraction, deep learning, online learning, Tensorflow, PyTorch.\\
+$\bullet$\CVItem{Theory-related:} \\Basic analysis skill towards real/complex variable functions and operators, optimization, information theory, discrete math.\\
+$\bullet$\CVItem{System-related:}\\ Profile, basic MCU programming, basic os-level programming, basic parallel programming, basic network programming. \\
+$\bullet$\CVItem{Others:}\\ Singing, street dance, drum, xiao.\\
+
+
+
+
+
+
+%\CVItem{{\large Hobby:}}\\
+%\textit{Drone, Video Editing, Graphic Design}
+%\SmallSep
+
+% CAMPU
+%\CVSection{OTHER ACTIVITIES}
+%\hrule
+%\SmallSep
+
+%\textit{September, 2017 - present, Chairman of the PKU PI Design Group}\\
+%\\
+
+
+
+% HONORS & SCHOLARSHIPS 	
+%\CVSection{HONORS \& SCHOLARSHIPS}
+%\hrule
+%\SmallSep
+%\begin{tabular}{l|l}
+	%$\Rightarrow$Oct 2014&\textit{France Excellence,Prize of Ambassador France}\footnotesize\\
+	%$\Rightarrow$Oct 2013&\textit{First price of Audi Green-Power Innovation Competition}\\
+	%$\Rightarrow$Dec 2012&\textit{ChenXin enterprise scholarship}\\
+	%$\Rightarrow$Dec 2012&\textit{Academic award of SJTU for 3 years}\\
+	%$\Rightarrow$Apr 2011&\textit{Excellent project for Social Internship of Shanghai}\footnotesize\\
+
+%\end{tabular}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
