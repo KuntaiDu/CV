@@ -100,23 +100,28 @@
 %%%%%%%%%%%%%%%%%%%%
 \Huge\bfseries {\color{\myThemeColor} Kuntai \textsc{Du}}
 \normalsize\normalfont
-\Letter{: \href{kuntai@uchicago.edu}{kuntai@uchicago.edu}}\\
+\Letter{: \href{mailto://kuntai@uchicago.edu}{kuntai@uchicago.edu}}
+~~~
+\Mobilefone{: 312-934-9215}
+~~~
+\Mundus{: \href{https://kuntaidu.github.io/aboutme}{Kuntai Du's personal website}}
+\\
 
-\CVSection{CONTACT INFORMATIONS}
-\hrule
-\SmallSep
-Department of Computer Science \\
-University of Chicago\\
-John Crerar Library\\
-5730 S. Ellis Ave.\\
-Chicago, IL  60637
+% \CVSection{CONTACT INFORMATIONS}
+% \hrule
+% \SmallSep
+% Department of Computer Science \\
+% University of Chicago\\
+% John Crerar Library\\
+% 5730 S. Ellis Ave.\\
+% Chicago, IL  60637
 
 \SmallSep
 
 \CVSection{RESEARCH INTERESTS}
 \hrule
 \SmallSep
-\textit{Video Analytics, Networking}
+\textit{Video Analytics, Networking, Computer System, Security, Deep Learning}
 \\
 
 % Education
@@ -128,38 +133,6 @@ Chicago, IL  60637
 \CVItem{2015 Sep - 2019 Jul\hfill\textsc{Peking University, Beijing, China}}\\
 \textit{Bachelor in Computer Intelligence Science}
 
-\SmallSep
-
-\CVSection{PUBLICATIONS}
-\hrule
-\SmallSep
-
-\CVItem{SIGCOMM 2020}\\
-\textit{Server-Driven Video Streaming for Deep Learning Inference} \\
-\text{\textbf{Kuntai Du}*, Ahsan Pervaiz*, Xin Yuan, Aakanksha Chowdhery, Qizheng Zhang, Henry Hoffmann, Junchen Jiang}
-
-\SmallSep
-
-\CVItem{MobiCom 2020}\\
-\textit{Renovating Road Signs for Infrastructure-to-Vehicle Networking: A Visible Light Backscatter Communication and Networking Approach} \\
-\text{Purui Wang, Lilei Feng, Guojun Chen, Chenren Xu, Yue Wu, Kenuo Xu, Guobin Shen, \textbf{Kuntai Du}, Gang Huang, Xuanzhe Liu}
-
-\SmallSep
-
-\CVSection{AWARDS}
-\hrule
-\SmallSep
-    NSDI travel grant (2020)
-    Merit Student (2016-2017)\\
-	Kwang-Hua Scholarship (2016-2017)\\
-	Bronze medal in National Olympiad in Informatics (2014)\\
-
-\CVSection{TEACHING EXPERIENCE}
-\hrule
-\SmallSep
-\text{Attend teaching assistant at CS15400: Introduction to Computer System (2020)}\\
-\text{Attend teaching assistant at Algorithm Design and Analysis two times. (2018,2019)}
-
 
 \SmallSep
 % Research Experience
@@ -167,41 +140,43 @@ Chicago, IL  60637
 \hrule
 \smallsep
 \CVItem{2019 Sep - present\hfill\textsc{Junchen's Group, University of Chicago}}\\
-\textit{Advised by Junchen Jiang}\\
-\textbf{Machine-centered Video Analytics}
+\textit{Advised by Prof. Junchen Jiang}\\
+\textbf{Deep-neural-network-based Video Analytics}
 \vspace{-0.5em}
 \begin{itemize}
     \vspace{-0.5em}
 	\setlength{\itemsep}{0pt}
 	\setlength{\parsep}{0pt}
 	\setlength{\parskip}{0pt}
-    \item Apply deep-neural-network-driven approach in video streaming for analytics and reduce half of the bandwidth usage on multiple applications and video genres.
+    \item Applied model-driven approach in video streaming for analytics, which can reduce the bandwidth usage by 59\%.
+    \item Explore video compression algorithm that reduces the file size and still maintains the accuracy of analytic results.
+    \item Collaborate with other groups on topics about general stream processing and AI pipelines on vision + NLP.
 \end{itemize}
 \smallsep
 
 \CVItem{2018 Sep - 2019 Jul\hfill\textsc{SOAR Group, Peking University}}\\
 \textit{Research Assistant of Prof. Chenren Xu}\\
-\textbf{Battery-free Backscatter Communication and Positioning Via Visible Light Communication}
+\textbf{Battery-free Backscatter Communication and Localization via Visible Light}
 \begin{itemize}
 	\vspace{-0.5em}
 	\setlength{\itemsep}{0pt}
 	\setlength{\parsep}{0pt}
 	\setlength{\parskip}{0pt}
-	\item Revise the dynamic-programming-based demodulation algorithm to support high-frequency demodulation.
-	\item Propose a localization algorithm based on self-developed ranging algorithm and achieve sub-meter accuracy.
+	\item Revised the dynamic-programming-based demodulation algorithm to support high-frequency demodulation.
+	\item Proposed a localization algorithm based on self-developed ranging algorithm, which can achieve sub-meter accuracy.
 \end{itemize}
 
 \CVItem{2018 Jul - 2018 Aug\hfill\textsc{University of Edinburgh}}\\
 \textit{Research Assistant of Prof. Boris Grot}\\
-\textbf{Software Optimization: Probabilistic Soft Logic}
+\textbf{Software Performance Optimization}
 \begin{itemize}
 	\vspace{-0.5em}
 	\setlength{\itemsep}{0pt}
 	\setlength{\parsep}{0pt}
 	\setlength{\parskip}{0pt}
-	\item Profile the software find that the performance is bounded by severe load imbalance and too much remote memory access.
-	\item Re-implement the optimization phase in C++ for fine-grained workload and memory control.
-	\item Propose a heuristic algorithm to optimize the memory access patterns iteratively.
+	\item Identified the performance bottleneck of the software: severe load imbalance and too much remote memory access.
+	\item Re-implemented part of the software in C++ for fine-grained workload and memory control.
+	\item Proposed a heuristic algorithm to optimize the memory access patterns in an iterative manner.
 \end{itemize}
 %\CVItem{2014-present\hfill\textsc{\'{E}cole Des Mines Nancy, France}}\\
 %\textit{-Department of Energy production and transformation}\\
@@ -217,20 +192,54 @@ Chicago, IL  60637
 	\setlength{\itemsep}{0pt}
 	\setlength{\parsep}{0pt}
 	\setlength{\parskip}{0pt}
-	\item Propose a new discriminator for the residue layer. This method is suitable for other low-level image generation tasks to capture the specific prior knowledge.
-	\item Propose a multi-granularity perceptual loss based on online learning theory.
+	\item Proposed a rain discriminator to learn the pattern of rain streaks and preserve the texture of the objects.
+	\item Proposed a multi-granularity perceptual loss to examine the image similarity on multiple scales.
 \end{itemize}
 
-
 \SmallSep
-\CVSection{SKILLS}
+
+\CVSection{PUBLICATIONS}
 \hrule
 \SmallSep
-$\bullet$\CVItem{Programing Language:}\\ C/C++, Python, lisp, Matlab, Java.\\
-$\bullet$\CVItem{AI-related:}\\ Low-level image processing, Feature extraction, deep learning, online learning, Tensorflow, PyTorch.\\
-$\bullet$\CVItem{Theory-related:} \\Basic analysis skill towards real/complex variable functions and operators, optimization, information theory, discrete math.\\
-$\bullet$\CVItem{System-related:}\\ Profile, basic MCU programming, basic os-level programming, basic parallel programming, basic network programming. \\
-$\bullet$\CVItem{Others:}\\ Singing, street dance, drum, xiao.\\
+
+\CVItem{SIGCOMM 2020}\\
+\textit{\href{https://dl.acm.org/doi/abs/10.1145/3387514.3405887}{Server-Driven Video Streaming for Deep Learning Inference}} \\
+\text{\textbf{Kuntai Du}*, Ahsan Pervaiz*, Xin Yuan, Aakanksha Chowdhery, Qizheng Zhang, Henry Hoffmann, Junchen Jiang}
+
+\SmallSep
+
+\CVItem{MobiCom 2020}\\
+\textit{\href{https://dl.acm.org/doi/10.1145/3372224.3380883}{Renovating Road Signs for Infrastructure-to-Vehicle Networking: A Visible Light Backscatter Communication and Networking Approach}} \\
+\text{Purui Wang, Lilei Feng, Guojun Chen, Chenren Xu, Yue Wu, Kenuo Xu, Guobin Shen, \textbf{Kuntai Du}, Gang Huang, Xuanzhe Liu}
+
+\SmallSep
+
+\CVSection{AWARDS}
+\hrule
+\SmallSep
+    NSDI travel grant (2020) \\
+    Merit Student (2016-2017)\\
+	Kwang-Hua Scholarship (2016-2017)\\
+	Bronze medal in National Olympiad in Informatics (2014)\\
+
+\CVSection{TEACHING EXPERIENCE}
+\hrule
+\SmallSep
+\text{Teaching assistant, Introduction to Computer System, University of Chicago. (2020)}\\
+\text{Teaching assistant, Algorithm Design and Analysis, Peking University. (2018, 2019)}
+
+
+
+
+% \SmallSep
+% \CVSection{SKILLS}
+% \hrule
+% \SmallSep
+% $\bullet$\CVItem{Programing Language:}\\ C/C++, Python, lisp, Matlab, Java.\\
+% $\bullet$\CVItem{AI-related:}\\ Low-level image processing, Feature extraction, deep learning, online learning, PyTorch, Tensorflow.\\
+% $\bullet$\CVItem{Theory-related:} \\Basic analysis skill towards real/complex variable functions and operators, optimization, information theory, discrete math.\\
+% $\bullet$\CVItem{System-related:}\\ Profiling, basic OS-related programming, basic parallel programming, basic network programming, basic MCU programming. \\
+% $\bullet$\CVItem{Interests:}\\ Singing, street dance, drum, xiao.\\
 
 
 
